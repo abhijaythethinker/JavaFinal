@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #251614;
+  font-family: "Merriweather", serif;
+  position: relative;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sf-logo {
+  width: 150px;
+  margin: 1em auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #dac751;
+  letter-spacing: 0.1em;
+  text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.6);
+}
+
+.select-container {
+  max-width: 860px;
+  display: flex;
+  margin: 1em auto 3em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 4px 4px 0px;
+}
+
+.character {
+  margin-bottom: 4px;
+  width: auto;
+  max-height: 120px;
+  align-self: stretch;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+.character__name {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: none;
+}
+.character__img, .character__name {
+  margin: 0;
+  padding: 0;
+}
+.character__img {
+  filter: grayscale(0.84);
+  height: 120px;
+}
+.character.active {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+.character.active .character__name {
+  display: block;
+  width: 100%;
+  background: #e3231e;
+  color: white;
+  opacity: 0.7;
+  margin-top: 0.8em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.3em 0;
+}
+.character.active:after {
+  content: "1P";
+  position: absolute;
+  text-align: center;
+  top: -15px;
+  left: 30%;
+  font-size: 36px;
+  color: #e3231e;
+  font-weight: 700;
+  text-shadow: 0px 0px 5px white;
+}
+.character.active .character__img {
+  filter: grayscale(0);
+  outline: 4px solid white;
+  -webkit-animation: flash 300ms linear;
+          animation: flash 300ms linear;
+}
+
+/* the great divide */
+
+.character {
+  margin-bottom: 4px;
+  width: auto;
+  max-height: 120px;
+  align-self: stretch;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+.character__name {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: none;
+}
+.character__img, .character__name {
+  margin: 0;
+  padding: 0;
+}
+.character__img {
+  filter: grayscale(0.84);
+  height: 120px;
+}
+.character.active2 {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+.character.active2 .character__name {
+  display: block;
+  width: 100%;
+  background: blue;
+  color: white;
+  opacity: 0.7;
+  margin-top: 0.8em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.3em 0;
+}
+.character.active2:after {
+  content: "2P";
+  position: absolute;
+  text-align: center;
+  top: -15px;
+  left: 30%;
+  font-size: 36px;
+  color: blue;
+  font-weight: 700;
+  text-shadow: 0px 0px 5px white;
+}
+.character.active2 .character__img {
+  filter: grayscale(0);
+  outline: 4px solid white;
+  -webkit-animation: flash 300ms linear;
+          animation: flash 300ms linear;
+}
+
+
+.menu {
+  font-family: silver;
+  color: black;
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: solid red; */
+  top: -20px;
+}
+
+.menuOption {
+  border: solid black;
+  border-width: 1px 5px 5px 1px;
+  font-size: 60px;
+  padding: 10px 20px 5px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.menuOption:hover {
+  box-shadow: inset 350px 0 0 0 #9eade9;
+  color: black;
+}
+
+.options {
+  /* border: solid green; */
+  position: relative;
+  top: 0;
+  display: flex;
+  gap: 0px;
+  /* margin-left: auto; */
+  /* justify-content: center; */
+}
+
+.video-game-btn {
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  font-weight: bold;
+  padding: 10px 0 10px 10px;
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color: gray;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 .2em gray;
+  cursor: pointer;
+
+}
+
+.video-game-font {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.button a {
+  color: #23211a;
+
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #b3c5f5;
+  display: block;
+  position: relative;
+  padding: 20px 40px;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  -webkit-box-shadow: inset 0 1px 0 #9fade7, 0 10px 0 #9fade7;
+  -moz-box-shadow: inset 0 1px 0 #9fade7, 0 10px 0 #9fade7;
+  box-shadow: inset 0 1px 0 #9fade7, 0 10px 0 #9fade7;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.button a:active {
+  top: 10px;
+  background-color: #afbaf2;
+  color: #1d1814;
+  -webkit-box-shadow: inset 0 1px 0 #9fade7, inset 0 -3px 0 #9fade7;
+  -moz-box-shadow: inset 0 1px 0 #9fade7, inset 0 -3pxpx 0 #9fade7;
+  box-shadow: inset 0 1px 0 #9fade7, inset 0 -3px 0 #9fade7;
+}
+
+.button:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+  position: absolute;
+  bottom: -15px;
+  left: -4px;
+  z-index: -1;
+  background-color: #2B1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    filter: brightness(100%);
+  }
+  20% {
+    filter: brightness(150%);
+  }
+  40% {
+    filter: brightness(100%);
+  }
+  60% {
+    filter: brightness(150%);
+  }
+  80% {
+    filter: brightness(100%);
+  }
+  100% {
+    filter: brightness(150%);
+  }
+}
+
+@keyframes flash {
+  0% {
+    filter: brightness(100%);
+  }
+  20% {
+    filter: brightness(150%);
+  }
+  40% {
+    filter: brightness(100%);
+  }
+  60% {
+    filter: brightness(150%);
+  }
+  80% {
+    filter: brightness(100%);
+  }
+  100% {
+    filter: brightness(150%);
+  }
+}
